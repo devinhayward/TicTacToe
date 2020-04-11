@@ -1,3 +1,3 @@
 # TicTacToe
 
-A description of this package.
+Helper module for my TicTacToe Application
