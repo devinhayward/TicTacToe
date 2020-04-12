@@ -4,7 +4,11 @@
 //
 //  Created by Devin Hayward on 2020-04-10.
 //
-public struct TicTacToe {
+import Foundation
+
+public struct TicTacToe: Identifiable {
+    public var id: ObjectIdentifier
+    
     public var board: [[Int]]
 }
 
@@ -29,6 +33,6 @@ public extension TicTacToe {
 //create an initializator for the board; 3 rows of free cells
 public extension TicTacToe {
     init() {
-        self.init(board: [[Int]](repeating: [Int](repeating: player.free.rawValue, count: 3), count: 3))
+        self.init(id: ObjectIdentifier(UUID.self) , board: [[Int]](repeating: [Int](repeating: player.free.rawValue, count: 3), count: 3))
     }
 }

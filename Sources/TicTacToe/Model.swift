@@ -7,8 +7,7 @@
 
 import SwiftUI
 
-@available(iOS 13, *)
-@available(OSX 10.15, *)
+@available(iOS 13, OSX 10.15, *)
 public class GameModel: ObservableObject {
     @Published public var MBoard: TicTacToe
     @Published public var CurrentPlayer: TicTacToe.player
