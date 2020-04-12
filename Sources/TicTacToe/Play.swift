@@ -9,7 +9,7 @@
 public extension TicTacToe {
     //check for a win
     func isWin(_ playerC: player) -> Bool {
-        let winRow = [playerC.returnInt(), playerC.returnInt(), playerC.returnInt()]
+        let winRow = [playerC.rawValue, playerC.rawValue, playerC.rawValue]
         //check for a row win
         for i in 0..<3 {
             if board[i] == winRow {
@@ -37,10 +37,10 @@ public extension TicTacToe {
 public extension TicTacToe {
     mutating func makeMove(location: (Int, Int), Cplayer: player) {
         //check if the location is available
-        guard board[location.0][location.1] == player.free.returnInt() else {
+        guard board[location.0][location.1] == player.free.rawValue else {
             fatalError()
         }
-        board[location.0][location.1] = Cplayer.returnInt()
+        board[location.0][location.1] = Cplayer.rawValue
     }
 }
 

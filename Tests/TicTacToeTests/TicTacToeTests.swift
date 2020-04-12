@@ -24,4 +24,17 @@ final class TicTacToeTests: XCTestCase {
         let answer2 = model.giveMeAString(Cpostion: (0, 0))
         XCTAssertEqual(answer2, "Y", "the 2nd move did not register in the board")
     }
+    
+    func testCurrentPlayerXText() {
+        let model = GameModel()
+        let answer = model.CurrentPlayer.playerString()
+        XCTAssertEqual(answer, "Player X", "Player X text did not work")
+    }
+    
+    func testCurrentPlayerYText() {
+        let model = GameModel()
+        model.CurrentPlayer = TicTacToe.player.y
+        let answer = model.CurrentPlayer.playerString()
+        XCTAssertEqual(answer, "Player Y", "Player Y text did not work")
+    }
 }

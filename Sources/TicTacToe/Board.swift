@@ -17,14 +17,14 @@ public extension TicTacToe {
     enum player: Int {
         case free = 0, x = 1, y = -1
         
-        public func returnInt() -> Int {
+        public func playerString() -> String {
             switch self {
             case .x:
-                return self.rawValue
+                return "Player X"
             case .y:
-                return self.rawValue
+                return "Player Y"
             case .free:
-                return self.rawValue
+                return ""
             }
         }
     }
