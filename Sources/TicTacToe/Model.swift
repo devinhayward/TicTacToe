@@ -18,7 +18,7 @@ public class GameModel: ObservableObject {
     }
     
     public func giveMeAString(Cpostion: (Int, Int)) -> String {
-        let square = MBoard.board[Cpostion.0][Cpostion.1]
+        let square = self.MBoard.board[Cpostion.0][Cpostion.1]
         if square == 1 {
             return "X"
         }else if square == -1 {
